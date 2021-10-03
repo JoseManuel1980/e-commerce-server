@@ -14,9 +14,9 @@ module.exports = {
     let totalPayment = 0;
 
     products.forEach((product) => {
+      //totalPayment += product.price * product.quantity;
       const calcPrice = (price, discount) => {
         if (!discount) return price;
-
         const discountAmount = (price * discount) / 100;
         return (price - discountAmount).toFixed(2);
       };
